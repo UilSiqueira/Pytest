@@ -1,7 +1,4 @@
 import json
-from unittest import TestCase
-from typing import List
-
 import pytest
 from django.urls import reverse
 from companies.models import Company
