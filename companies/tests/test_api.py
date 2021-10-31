@@ -42,7 +42,7 @@ def test_create_existing_company_should_fail(client) -> None:
     assert response.status_code == 400
     assert json.loads(response.content) == {
         "name": ["company with this name already exists."]
-        }
+    }
 
 
 def test_create_company_with_only_name_all_fields_should_be_default(client) -> None:
