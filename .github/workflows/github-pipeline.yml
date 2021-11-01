@@ -22,10 +22,9 @@ jobs:
         python-version: 3.8
     - name: Api tests
       run: |
+        env
         pip install pipenv --upgrade
-        pip install djangorestframework
         pipenv install --system
-        export DJANGO_SETTINGS_MODULE=coronavstech.settings
         pytest -s -v --durations=0
     - name: Lint with flake
       run: |
