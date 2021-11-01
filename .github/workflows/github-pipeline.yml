@@ -15,21 +15,21 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.8
-      - uses: actions/setup-python@v2
-        with:
-          Python-version: 3.8
-      name: Api tests
-        run: |
-          pip install pipenv --upgrade
-          pipenv install --system
-          export DJANGO_SETTINGS_MODULE=coronavstech.settings
-          pytest -s -v --durations=0
-      name: Lint with flake
-      - run: |
-          pip install flake8
-          flake8
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+    - uses: actions/setup-python@v2
+      with:
+        python-version: 3.8
+    - name: Api tests
+      run: |
+        pip install pipenv --upgrade
+        pipenv install --system
+        export DJANGO_SETTINGS_MODULE=coronavstech.settings
+        pytest -s -v --durations=0
+    - name: Lint with flake
+      run: |
+        pip install flake8
+        flake8
 
 
 
