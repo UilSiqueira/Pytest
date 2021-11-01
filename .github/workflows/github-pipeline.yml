@@ -22,7 +22,7 @@ jobs:
         python-version: 3.8
     - name: Api tests
       run: |
-        env
+        python manage.py shell
         pip install pipenv --upgrade
         pipenv install --system
         pytest -s -v --durations=0
