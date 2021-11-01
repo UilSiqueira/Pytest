@@ -24,7 +24,7 @@ jobs:
       run: |
         pip install pipenv --upgrade
         pipenv install --system
-        ${{secrets.PYTHON_PATH}}
+        ${{ secrets.PYTHON_PATH }}
         pytest -s -v --durations=0
     - name: Lint with flake
       run: |
