@@ -23,6 +23,7 @@ jobs:
     - name: Api tests
       run: |
         pip install pipenv --upgrade
+        pip install djangorestframework
         pipenv install --system
         export DJANGO_SETTINGS_MODULE=coronavstech.settings
         pytest -s -v --durations=0
