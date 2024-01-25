@@ -1,3 +1,3 @@
 # Pytest
 
-Automated unit tests with Pytest and CI Github workflows 
+Simple automated unit tests with Pytest and CI Github workflows 
